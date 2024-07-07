@@ -1,8 +1,8 @@
 import "./index.css";
 const Footer = () => (
   <footer>
-    <div class="footer-container">
-      <div class="footer-section about">
+    <div className="footer-container">
+      <div className="footer-section about">
         <h2>About Us</h2>
         <p>
           We are a leading e-commerce platform dedicated to providing the best
@@ -10,7 +10,7 @@ const Footer = () => (
           at competitive prices, ensuring customer satisfaction.
         </p>
       </div>
-      <div class="footer-section links">
+      <div className="footer-section links">
         <h2>Quick Links</h2>
         <ul>
           <li>Home</li>
@@ -19,7 +19,7 @@ const Footer = () => (
           <li>Contact</li>
         </ul>
       </div>
-      <div class="footer-section contact">
+      <div className="footer-section contact">
         <h2>Contact Us</h2>
         <ul>
           <li>Email: support@ecommerce.com</li>
@@ -27,7 +27,7 @@ const Footer = () => (
           <li>Address: 123 E-commerce St, Online City, WEB 4567</li>
         </ul>
       </div>
-      <div class="footer-section social">
+      <div className="footer-section social">
         <h2>Follow Us</h2>
         <ul>
           <li>Facebook</li>
@@ -37,7 +37,7 @@ const Footer = () => (
         </ul>
       </div>
     </div>
-    <div class="footer-bottom">
+    <div className="footer-bottom">
       <p>&copy; 2024 E-commerce. All rights reserved.</p>
     </div>
   </footer>

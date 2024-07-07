@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import Navbar from "./Components/Navbar";
 import Banner from "./Components/Banner";
 import "./App.css";
@@ -108,29 +108,47 @@ const allProductsList = [
 ];
 
 class App extends Component {
+  state = { cartCount: 0 };
+
+  onAddClicked = () => {
+    this.setState((prevState) => ({ cartCount: prevState.cartCount + 1 }));
+  };
+
   render() {
+    const { cartCount } = this.state;
     return (
       <div>
         <div className="header">
-          <Navbar />
+          <Navbar count={cartCount} />
           <Banner />
         </div>
+
         <div className="product-section">
           <h2 className="title">Deals of the Day</h2>
           <ul className="products-row-list">
             {dealsList.map((eachObj) => (
-              <ProductItem product={eachObj} key={eachObj.id} />
+              <ProductItem
+                product={eachObj}
+                key={eachObj.id}
+                onAddClicked={this.onAddClicked}
+              />
             ))}
           </ul>
         </div>
+
         <div className="product-section">
           <h2 className="title">All Products</h2>
           <ul className="products-row-list">
             {allProductsList.map((eachObj) => (
-              <ProductItem product={eachObj} key={eachObj.id} />
+              <ProductItem
+                product={eachObj}
+                key={eachObj.id}
+                onAddClicked={this.onAddClicked}
+              />
             ))}
           </ul>
         </div>
+
         <div>
           <Footer />
         </div>
