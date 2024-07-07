@@ -1,0 +1,88 @@
+.banner-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding-left: 30px;
+  margin-left: 25px;
+  margin-right: 25px;
+  margin-top: 50px;
+}
+
+.text-container h1 {
+  font-size: 50px;
+  line-height: 60px;
+  margin: 25px 0;
+  font-family: "Bree Serif", serif; /* Ensure to use proper font-family with quotes */
+  color: rgb(255, 183, 0);
+}
+
+.btn {
+  display: inline-block;
+  background: rgb(3, 3, 3);
+  color: rgb(255, 255, 255);
+  padding: 15px 20px;
+  margin: 30px 0;
+  font-weight: bold;
+  border-radius: 10px;
+  border: none;
+}
+
+.btn:hover {
+  background-color: rgb(255, 183, 0);
+  color: black;
+}
+
+.banner-image {
+  max-width: 350px;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .text-container h1 {
+    font-size: 45px;
+    line-height: 55px;
+  }
+  .banner-image {
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 992px) {
+  .banner-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .text-container h1 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  .banner-image {
+    max-width: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-container h1 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  .btn {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .text-container h1 {
+    font-size: 30px;
+    line-height: 40px;
+  }
+  .banner-container {
+    padding-left: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+  .btn {
+    font-size: 16px;
+  }
+}
